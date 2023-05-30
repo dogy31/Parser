@@ -78,4 +78,3 @@ def Cardcod(first_day, first_data, first_temperature, second_day, second_data ,s
     widget.show()
     
     sys.exit(app.exec())
-    print("Hellow")

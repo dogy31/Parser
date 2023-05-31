@@ -6,10 +6,11 @@ def Cardcod(first_day, first_data, first_temperature, second_day, second_data ,s
     from PyQt6.QtCore import QUrl
 
     class Card(QWidget):
-        def __init__(self, title, description):
+        def __init__(self, title, description,description2):
             super().__init__()
             self.title = title
             self.description = description
+            self.description2 = description2
             self.initUI()
 
         def initUI(self):
@@ -23,6 +24,10 @@ def Cardcod(first_day, first_data, first_temperature, second_day, second_data ,s
             # Добавляем описание
             desc_label = QLabel(self.description)
             desc_label.setStyleSheet("font-size: 40px;")
+            vbox.addWidget(desc_label)
+
+            desc_label = QLabel(self.description2)
+            desc_label.setStyleSheet("font-size: 30px;")
             vbox.addWidget(desc_label)
 
             # Добавляем кнопку

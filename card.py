@@ -43,11 +43,11 @@ def Cardcod(first_day, first_data, first_temperature, second_day, second_data ,s
         # Создаем экземпляры карточек и заполняем их данными
         global cards
         cards = []
-        card1 = Card("Сегодня"f"{first_day} {first_data}", f"{first_temperature} " f"{first_night_temperature}")
+        card1 = Card(f"Сегодня {first_day} {first_data}", f"{first_temperature}", f" {first_night_temperature}")
         cards.append(card1)
-        card2 = Card("Завтра"f"{second_day} {second_data}", f"{second_temperature} " f"{second_night_temperature}" )
+        card2 = Card(f"Завтра {second_day} {second_data}", f"{second_temperature}", f" {second_night_temperature}")
         cards.append(card2)
-        card3 = Card("После завтра"f"{third_day} {third_data}", f"{third_temperature} "f"{third_night_temperature}" )
+        card3 = Card(f"После завтра {third_day} {third_data}", f"{third_temperature}", f" {third_night_temperature}")
         cards.append(card3)
 
         # Размещаем карточки на странице
@@ -78,4 +78,3 @@ def Cardcod(first_day, first_data, first_temperature, second_day, second_data ,s
     widget.show()
     
     sys.exit(app.exec())
-    print("lol")

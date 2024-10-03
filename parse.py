@@ -15,35 +15,38 @@ response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Найти все элементы с классом "div"
-elements = soup.find_all('div', class_='day-week')
+day_week_elements = soup.find_all('div', class_='day-week')
 
-first_day = elements[0]
-second_day = elements[1]
-third_day = elements[2]
+first_day = day_week_elements[0]
+second_day = day_week_elements[1]
+third_day = day_week_elements[2]
 
-elements = soup.find_all('div', class_='numbers-month')
+numbers_month_elements = soup.find_all('div', class_='numbers-month')
 
-first_numbers = elements[0]
-second_numbers = elements[1]
-third_numbers = elements[2]
+first_numbers = numbers_month_elements[0]
+second_numbers = numbers_month_elements[1]
+third_numbers = numbers_month_elements[2]
 
-elements = soup.find_all('div', class_='month')
+month_elements = soup.find_all('div', class_='month')
 
-first_month = elements[0]
-second_month = elements[1]
-third_month = elements[2]
+first_month = month_elements[0]
+second_month = month_elements[1]
+third_month = month_elements[2]
 
-elements = soup.find_all('div', class_='day-temperature')
+day_temperature_elements = soup.find_all('div', class_='day-temperature')
 
-first_temperature = elements[0]
-second_temperature = elements[1]
-third_temperature = elements[2]
+first_temperature = day_temperature_elements[0]
+second_temperature = day_temperature_elements[1]
+third_temperature = day_temperature_elements[2]
 
-elements = soup.find_all('div', class_='night-temperature')
+night_temperature_elements = soup.find_all('div', class_='night-temperature')
 
-first_night_temperature = elements[0]
-second_night_temperature = elements[1]
-third_night_temperature = elements[2]
+first_night_temperature = night_temperature_elements[0]
+second_night_temperature = night_temperature_elements[1]
+third_night_temperature = night_temperature_elements[2]
+
+
+#Передаём всё в другой файл
 
 first_data = first_numbers.text + " " +  first_month.text
 second_data = second_numbers.text + " " +  second_month.text
